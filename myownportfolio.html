@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+</head>
+<style>
+    * {
+            margin:0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image:url(pbg6.jpg); 
+            background-size: 100% 140%;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: center;
+            
+        }
+        header{
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background-color: transparent;
+        }
+        .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                 padding: 20px 40px;
+
+        }
+         nav {
+            display: flex;
+            justify-content: space-between;
+         }
+         .logo{
+            font-size: 24px;
+            color: #ca84ac;
+            text-decoration: none;
+            font-weight: bold;
+         }
+         .nav-links{
+         list-style: none;
+            display: flex;
+            gap: 25px;
+         }
+
+          .nav-links a {
+             text-decoration: none;
+             color: #ca84ac;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+          }
+          .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            color: #ecebe4;
+             padding: 15px;
+             border-radius: 5px;     
+        }
+     #hero {
+         padding: 150px 40px 100px;
+         color: #fff;
+    background: transparent;
+    background-size: cover;
+     }
+     .hero-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    flex-wrap: wrap;
+     }
+        .hero-text {
+               flex: 1;
+                min-width: 280px;
+        }
+        .hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+      .btn{
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    color: #de62a0;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+     }
+     .btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    color: #fff;
+}
+           
+#about {
+    padding: 100px 40px;
+    background-image: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+     color: #fff;
+}
+
+.about-content {
+          max-width: 900px;
+          margin: 0 auto;
+}
+ 
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ca84ac;
+}
+
+.about-text p {
+    font-size: 18px;
+     line-height: 1.7;
+     margin-bottom: 20px;
+}
+
+#experience{
+    padding: 100px 40px;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(5px);
+    color: #fff;
+}
+ .experience-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-content h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #ca84ac;
+    text-align: center;
+}
+.experience-item {
+    margin-bottom: 40px;
+     padding: 20px;
+     background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+}
+
+.experience-item h3 {
+    font-size: 24px;
+    color: #de62a0;
+}
+
+.experience-item h4 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: #eee;
+}
+
+.experience-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#projects {
+    padding: 100px 40px;
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(5px);
+    color: #fff;
+}
+
+.container4 {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.projects-content {
+    text-align: center;
+}
+
+.projects-content h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #ca84ac;
+}
+
+.projects-content h3 {
+    font-size: 24px;
+    color: #de62a0;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.projects-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #eee;
+}
+
+.projects-content img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    alignment:center ;
+}
+
+.projects-content img:hover {
+    transform: scale(1.03);
+}
+
+.projects-content .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    color: #de62a0;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-bottom: 40px;
+}
+
+.projects-content .btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+/* Projects Section */
+#projects {
+    padding: 100px 40px;
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(5px);
+    color: #fff;
+}
+
+.projects-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.projects-content h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #ca84ac;
+    text-align: center;
+}
+
+.project-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.02);
+}
+
+.project-item h3 {
+    color: #de62a0;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Contact Section */
+#Contact {
+    padding: 100px 40px;
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(4px);
+    color: #fff;
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-content h2 {
+    font-size: 36px;
+    margin-top: 85px;
+    margin-bottom: 20px;
+    color: #ca84ac;
+}
+
+.contact-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #ecebe4;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 16px;
+    backdrop-filter: blur(3px);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #eee;
+}
+
+.contact-form button {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    color: #de62a0;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 80px;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-container p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #ca84ac;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-socials a {
+    color: #de62a0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 16px;
+}
+
+.footer-socials a:hover {
+    color: #fff;
+}
+
+
+
+
+
+</style>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                 <a href="#" class="logo">Portfolio</a>
+                 <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+                     <!-- Hero Section -->
+         <section id="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hello, I'm Ayesha</h1>
+                <p>A passionate web developer creating modern and responsive designs.</p>
+                <a href="#projects" class="btn">View Projects</a>
+            </div> 
+        </div>
+    </div>
+</section>
+             <!-- About Section-->
+               <!-- About Section -->
+<section id="about">
+    <div class="about-container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    I'm Ayesha, a Computer Science student and an aspiring Web Developer with a strong passion for designing clean, modern, and responsive websites. 
+                    I enjoy turning ideas into digital experiences using HTML, CSS, JavaScript, and modern frameworks. I'm constantly learning and improving to stay up-to-date in the tech world.
+                </p>
+                <p>
+                    Whether it's building a personal website or collaborating on a bigger project, I'm always excited to create something meaningful and impactful.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+                     <!-- Experience Section -->
+<section id="experience">
+    <div class="container3">
+        <div class="experience-content">
+            <h2>My Experience</h2>
+            
+
+            <div class="experience-item">
+                <h3>Freelance Projects</h3>
+                <h4>Remote, 2024 – Present</h4>
+                <p>
+                    Designed and developed several portfolio websites for clients. 
+                    Gained experience in client communication, deadline management, and customized solutions using modern web technologies.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Computer Science Student</h3>
+                <h4>Superior University, 2024 – Present</h4>
+                <p>
+                    Currently pursuing an associate  degree in Computer Science. 
+                    Completed coursework in Data Structures, Web Development, Database Systems, and Software Engineering.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+                          <!-- Projects Section -->
+<section id="projects">
+    <div class="container4">
+        <div class="projects-content">
+            <h2>My Projects</h2>
+
+    <div class="project-item">
+                <h3> Calculator</h3>
+                <p>Created expense calculator tool with HTML, CSS, and JavaScript.</p>
+                <a href="https://6896ff9be394e95847ffba10--gleeful-selkie-aa546d.netlify.app/" class="btn" target="_blank">View Project</a>
+            </div>
+</section>
+             <!-- Contact Section -->
+            
+        <section class="Contact">
+            <div class="container6">
+                <div class="contact-content">
+                    <h2>Contact Me</h2>
+            <p>If you'd like to connect, collaborate, or just say hi — drop a message below!</p>
+
+                        <form class="contact-form">
+
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="name" placeholder="Your Message" required>
+                            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                </div>
+            </div>
+        </section>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+                     <!--footer-->
+        <!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <p>© 2025 Ayesha Aurangzeb. All rights reserved.</p>
+        <div class="footer-socials">
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            <a href="mailto:youremail@example.com">Email</a>
+        </div>
+    </div>
+</footer>
+
+            
+</body>
+</html>
